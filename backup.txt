@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<title>Umea Wheels</title>
+
+<head>
+    <link rel = "stylesheet" href="styles.css">
+    <meta charset = "UTF-8F">
+    <meta name="author" content="John Doe">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+
+
+    <h1 style= "font-size:100px;"> Detta är min rubrik</h1>
+    
+    
+    <p>Detta är min paragraf under headtaggen</p>
+    <hr>
+</head>
+<body>
+    <h1>DEtta är min rubrik i bodytaggen</h1>
+    <p>detta är min paragraf i bodytaggen</p>
+    <br>
+    <hr>
+    <p style="color: red;"> Den här paragrafen är röd</p>
+    <hr>
+    <h2>Det här är en h2 rubrik</h2>
+    <a href="https://www.w3schools.com">link till w3school</a>
+    <img src="umewheels.png" alt="company logo" width="180" height="180"> <!-- alt attributen should reflect the icons content-->
+    
+    <p>This is a <br> paragraph with a line break.</p>
+    <br>
+
+    <h1>h1</h1><h2>h2</h2><h3>h3</h3><h4>h4</h4><h5>h5</h5><h6>h6</h6>
+
+    <a href="https://www.w3schools.com">Visit W3Schools</a>
+
+
+    <img src="https://www.w3schools.com/images/img_girl.jpg" alt="picture from w3school"> <!--det här är en länk till en bild som inte finns längre-->
+
+
+
+
+
+
+</body>
+
+</html>
+
+
