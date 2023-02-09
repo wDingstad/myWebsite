@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 
-<html lang="sv">
-<title>Umea Wheels</title>  
-
 
 <head>
+
 
     <link rel = "stylesheet" href="styleasd.css"> 
     <meta charset="UTF-8">
     <meta name="author" content="William Dingstad">
-    <meta name="keywords" content="HTML, CSS, JavaScript">    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS">  
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>Umea Wheels</title>  
+    <html lang="sv"></html>
 
 </head>
 <body>
@@ -18,12 +18,21 @@
 
     <div class="container">
         <nav class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">MENY</button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#home">Home</a>
+                  <a href="#about">About</a>
+                  <a href="#contact">Contact</a>
+                </div>
+              </div>
             <ul>
                 <li><a href="#home">Hem</a></li> 
                 <li><a href="#service">Tjänster</a></li>
                 <li><a href="#about">Om oss</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
+            
         </nav>  
 
         <section id="home">
@@ -51,24 +60,22 @@
 
         <section id="service">
             <div class = "menu">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!
-                <br>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!</p>
                 <img src="stock bild.jpg" height="50%" width="90%" alt="bild för köp meny">
                 <a href="#home">KÖPA</a>
             </div>
 
             <div class = "menu">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!
-                <br>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!</p>
                 <img src="repairstock.png" height="50%" width="90%" alt="bild för laga meny">
                 <a href="#home">LAGA</a>
                 
             </div>
 
             <div class = "menu">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!
-                <br>
-                <img src="rentstock.jpg" height="50%" width="90%" alt="bild för hyra meny">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!</p>
+
+                <img src="rentstock.png" height="50%" width="90%" alt="bild för hyra meny">
                 <a href="#home">HYRA</a>
                 
             </div>
@@ -77,7 +84,7 @@
         <section id="about">
               <div class="menu">
                 <h1>OM OSS</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque et veritatis corporis, pariatur necessitatibus alias veniam esse sapiente, inventore vel, voluptatem eligendi repudiandae facilis placeat! Amet accusamus veniam libero placeat.'
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque et veritatis corporis, pariatur necessitatibus alias veniam esse sapiente, ainventore vel, voluptatem eligendi repudiandae facilis placeat! Amet accusamus veniam libero placeat.'
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt possimus accusamus, unde libero minima cum ipsum, mollitia error nam corporis, fuga consequuntur nobis fugiat veritatis earum velit architecto. Veritatis, modi!
                 </p>
               </div>
@@ -86,8 +93,8 @@
               <div class = "aboutbox"><img src="newg2.png" alt="bild" height="100%" width="100%" style="border:2px solid rgb(255, 255, 255);"></div>
               <div class = "aboutbox"><img src="newg3.png" alt="bild" height="100%" width="100%" style="border:2px solid white;"></div>
               <div class = "aboutbox"><video width="100%" height="100%" controls>
-                <source src="Rick Astley - Never Gonna Give You Up (Official Music Video).mp4" type="video/mp4">
-                This browser does not support video tag.
+                <source src="rick.mp4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
               </video></div>
 
         </section>
@@ -108,18 +115,18 @@
                 <br>
                 <br>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7043.102644419189!2d20.3099823!3d63.8120427!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5d2914a70278196!2sUme%C3%A5%20Wheels!5e0!3m2!1ssv!2sse!4v1675176359116!5m2!1ssv!2sse" 
-                width="90%" height="50%" style="border:2px solid rgb(0, 0, 0);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                width="90%" height="50%" style="border:2px solid rgb(0, 0, 0);" allowfullscreen="yes" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
             </div>
 
                 <div class = "contactform">
                     <form action="mailto:william.dingstad@hotmail.se"   method="post"   enctype="text/plain">
                         <p>Namn: <br></p>
-                        <input type="text" name="nae"> <br>
+                        <input type="text" name="nae"style="width: 10vw; height:5vh"> <br>
                         <p>E-mail:<br></p>
-                        <input type="text" name="mail"> <br>
+                        <input type="text" name="mail"style="width: 10vw; height:5vh"> <br>
                         <p>Telefonnummer:<br></p>
-                        <input type="text" name="number"> <br>
+                        <input type="text" name="number"style="width: 10vw; height:5vh"> <br>
                         <p>Meddelande:<br></p>
                         <input type="text" name="comment" style="width: 80%; height: 10vh;"><br>
                         <input type="submit"  value="Skicka">

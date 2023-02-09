@@ -4,13 +4,14 @@
 
 }
 
+
 body{
     font-family: 'Courier New', Courier, monospace;
     background-color: white;
     color: black;
     height: 100vh;
     line-height: 1.6;
-    overflow: hidden; /* Hide scrollbars */
+    
 }
 
 .container{
@@ -21,11 +22,6 @@ body{
     scroll-snap-type: y mandatory;
 }
 
-.lead{
-    font-size: 1.5rem;
-        
-}
-
 .navbar{
     position: fixed;
     top: 0;
@@ -34,8 +30,7 @@ body{
     width: 100%;
     height: 60px;
     background: orange;
-    font-size: 20px
-    
+    font-size: 1.3vw;
 }
 
 .navbar ul{
@@ -43,7 +38,6 @@ body{
     list-style: none;
     width: 100%;    
     justify-content: center;
-
 }
 
 .navbar ul li {
@@ -60,10 +54,8 @@ body{
 .navbar ul li a:hover{
     color: white;
     transition: all 0.2s ease-in-out;
-
     
 }
-
 
 section{
     display: flex;
@@ -73,11 +65,10 @@ section{
 }
 section h1{
     margin-top: 5%;
-    font-size: 20px;
+    font-size: 1.3rem;
 }
 section#home{
-    background: url('carl-nenzen-loven-igKjieyjcko-unsplash.jpg');
-    background-repeat: no-repeat;   
+    background: url('carl-nenzen-loven-igKjieyjcko-unsplash.jpg');   
 
 
 
@@ -95,10 +86,12 @@ section#about{
 section#contact{
     display: flex; 
     flex-direction: row;
-    background: url('tiffany-nutt-0ClfreiNppM-unsplash.jpg')
+    background: url('tiffany-nutt-0ClfreiNppM-unsplash.jpg');
 }
 section#buy{
-    background: url('carl-nenzen-loven-igKjieyjcko-unsplash.jpg')
+    background: url('robert-bye-tG36rvCeqng-unsplash (3).jpg');
+    display: flex;
+    flex-direction: row;
 }
 
 .menu { 
@@ -108,12 +101,17 @@ section#buy{
     margin-top: 100px;
     margin-left: 25px;
     margin-right: 25px;
-    font-size: 20px;
+    font-size: 1.3vw;
     background-color: orange;
     color: rgb(0, 0, 0);
     text-align: center;
     border:  #000000;
 
+}
+
+.menu p{
+    padding: 5%;
+    text-align: justify;
 }
 
 .menu ul{
@@ -126,14 +124,15 @@ section#buy{
 }
 
 .menu a{
-    width: 90%;
-    height: 16%;
+    width: 27vw;
+    height: 12vh;
     justify-content: center;
     margin-top: 5%;
     margin-left: 5%;
     color: white;
     text-decoration: none;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 2.0vw;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -176,7 +175,7 @@ section#buy{
 }
 .aboutbox:hover{
     color:black;
-    background-color: rgb(163, 33, 33);
+    background-color: rgb(0, 0, 0);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 
@@ -189,6 +188,7 @@ section#buy{
     margin-left: 10%;
     margin-top: 100px;
     justify-content: center;
+    font-size: 1.3vw;
 
 }
 .contactform p{
@@ -199,5 +199,121 @@ section#buy{
 
 .contactform input{
     margin-left: 10%;
-    /* overflow scroll kanske här */
+    font-size: 1.3vw;
+
+}
+.presentation{
+    height: 80vh;
+    width: 54vw;
+    background-color: orange;
+    margin-left: 10%;
+    margin-top: 100px;
+    justify-content: center;
+
+}
+.presentation p{
+    margin-left: 10%;
+    margin-top: 2%;
+    font-weight: bold;
+}
+
+.presentation input{
+    margin-left: 10%;
+}
+
+.presentation img{
+    margin-left: 11%;
+    margin-top: 5%;
+    border: solid black;
+
+
+}
+
+
+@media screen and (min-width: 450px){
+    .dropdown{
+        display:none;
     }
+}
+
+@media screen and (max-width: 450px){
+
+    .navbar ul{
+        display: none;        
+
+    }
+
+    .menu{
+        height: 70vh;
+        width: 80vw; 
+        margin-left: 10%;
+        font-size: 14px;
+        background-color: orange;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        border:  #000000;
+    }
+    .menu a{
+        width: 72vw;
+        height: 12vh;
+        font-size: 1.5rem;
+    }
+    .menu p{
+        font-size: 0.8rem;
+    }
+    section#service{
+        display: none;
+    }
+
+    section#about{
+
+    }
+    .aboutbox{
+        display:none;
+    }
+    .contactform{
+        display: none;
+    }
+
+    .dropbtn {
+        font-family: 'Courier New', Courier, monospace;
+        background-color: orange;
+        color: black;
+        padding: 20px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .dropbtn:hover, .dropbtn:focus {
+        color: white;
+        transition: all 0.2s ease-in-out;
+      }
+      
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown a:hover {background-color: #ddd;}
+      
+      .show {display: block;}
+
+  }
