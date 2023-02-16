@@ -13,7 +13,7 @@
 
 
 </head>
-<body></body>
+<body>
 
     <div class="container">
         <section id="buy">
@@ -29,12 +29,57 @@
             <div class="menu">
                 <h1>KÖPA CYKEL</h1><br>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ipsa provident. Quam reiciendis, nulla dicta dolorum a libero aliquam error modi ab eos maiores sequi nihil quis at ducimus odio.
-            LOREM
+            LOREM Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ipsa provident. Quam reiciendis, nulla dicta dolorum a libero aliquam error modi ab eos maiores sequi nihil quis at
             <a href="buy.html">BOKA TID</a>
 
             </div>
             <div class="presentation">
-                <img src="bikeex.jpg" style="height: auto; width: auto;">
+                <div class="content">
+
+                    <img id="myImage" src="bikeex.jpg" style="width:100%; height: 100%">
+                    
+                </div>
+
+
+
+
+                <script> 
+                
+                function randomImage(){ //randomizes a image on the website. 
+
+                    let i = Math.floor(Math.random() * 10+1);
+                    if (i < 4){
+                        document.getElementById('myImage').src='repairstock.png'
+                        }
+                    
+                    if (i < 6 && i > 4){
+                        document.getElementById('myImage').src='rentstock.png'
+                        }
+
+                    if (i > 6){
+                        document.getElementById('myImage').src='bikeex.jpg'
+                        }
+                    }
+                
+                    function image(){
+                        document.getElementById('myImage').src='bikeex.jpg'
+                    }
+                </script>
+
+
+                <button onclick="document.getElementById('myImage').src='stockbild.jpg'">1</button>
+                <button onclick="document.getElementById('myImage').src='rentstock.png'">2</button>
+                <button onclick="document.getElementById('myImage').src='repairstock.png'">3</button>
+                <button onclick="document.getElementById('myImage').src='umewheels.png'">4</button>
+                <button onclick="document.getElementById('myImage').src='rentstock.png'">5</button>
+                <button onclick="document.getElementById('myImage').src='rentstock.png'">6</button>
+                <button onclick="document.getElementById('myImage').src='rentstock.png'">7</button>
+                <button onclick="document.getElementById('myImage').src='rentstock.png'">8</button>
+                <button onclick="document.getElementById('myImage').src='rentstock.png'">9</button>
+                <button onclick="document.getElementById('myImage').src='rentstock.png'">10</button>
+                <button onclick="randomImage()">im feeling lucky</button> 
+                
+
             </div>
         </section>
     </div>
@@ -42,3 +87,4 @@
 
 
 </html>
+ 

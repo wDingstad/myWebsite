@@ -1,39 +1,91 @@
 <!DOCTYPE html>
+<html lang="sv">
 
 
 <head>
 
 
     <link rel = "stylesheet" href="styleasd.css"> 
-    <meta charset="UTF-8">
+    <link rel="stylesheet" media="print" href="print.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <meta charset="UTF-8"> 
     <meta name="author" content="William Dingstad">
     <meta name="keywords" content="HTML, CSS">  
     <meta name="viewport" content="width=device-width, initial-scale=1">  
     <title>Umea Wheels</title>  
-    <html lang="sv"></html>
+    
+
+
+
+    <script> 
+
+        function focusText(x){
+            x.style.background = "silver"
+        }
+        function resetFocus(x){
+            x.style.background = "white"
+
+        }
+
+        function openorclose(){ 
+            const d = new Date();
+            let hour = d.getHours();
+            if (hour > 16 && hour < 19){
+                alert("We're open right now!");
+            }
+            else {
+                alert("We're closed right now!")
+            }
+
+        }
+        $(document).ready(function(){
+            $("#button3").click(function(){
+                $("#Text1").fadeTo(0,0.25);
+                $("#Text2").fadeTo(1000,0.75);
+  });
+});
+
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("30");
+    $("#panel1").slideToggle("30");
+    $("#panel2").slideToggle("30");
+    $("#panel3").slideToggle("30");
+  });
+});
+
+$(document).ready(function(){
+  $("#button1").click(function(){
+    $("div").animate({left: '80%'});
+  });
+});
+
+
+    </script>
+    
 
 </head>
-<body>
+<body onload="openorclose()"> 
 
 
     <div class="container">
+        <div id="flip"><span></span>
+            <span></span>
+            <span></span></div>
+        <div id="panel"><a href="#home">Hem</a></div>
+        <div id="panel1"><a href="#service">Tjänster</a></div>
+        <div id="panel2"><a href="#about">Om oss</a></div>
+        <div id="panel3"><a href="#contact">Kontakt</a></div> 
+        
         <nav class="navbar">
-            <div class="dropdown">
-                <button class="dropbtn">MENY</button>
-                <div id="myDropdown" class="dropdown-content">
-                  <a href="#home">Home</a>
-                  <a href="#about">About</a>
-                  <a href="#contact">Contact</a>
-                </div>
-              </div>
             <ul>
                 <li><a href="#home">Hem</a></li> 
                 <li><a href="#service">Tjänster</a></li>
                 <li><a href="#about">Om oss</a></li>
                 <li><a href="#contact">Kontakt</a></li>
             </ul>
-            
-        </nav>  
+
+        </nav>
 
         <section id="home">
             <div class= "menu">
@@ -51,6 +103,7 @@
                     <br>
                     </b>
                     
+                    
                     <a href="buy.html">KÖPA</a>
                     <a href="#home">LAGA</a>
                     <a href="#home">HYRA</a>
@@ -61,7 +114,7 @@
         <section id="service">
             <div class = "menu">
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!</p>
-                <img src="stock bild.jpg" height="50%" width="90%" alt="bild för köp meny">
+                <img src="stockbild.jpg" height="50%" width="90%" alt="bild för köp meny">
                 <a href="#home">KÖPA</a>
             </div>
 
@@ -115,23 +168,29 @@
                 <br>
                 <br>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7043.102644419189!2d20.3099823!3d63.8120427!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5d2914a70278196!2sUme%C3%A5%20Wheels!5e0!3m2!1ssv!2sse!4v1675176359116!5m2!1ssv!2sse" 
-                width="90%" height="50%" style="border:2px solid rgb(0, 0, 0);" allowfullscreen="yes" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                width="90%" height="50%" style="border:2px solid rgb(0, 0, 0);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
             </div>
 
                 <div class = "contactform">
                     <form action="mailto:william.dingstad@hotmail.se"   method="post"   enctype="text/plain">
                         <p>Namn: <br></p>
-                        <input type="text" name="nae"style="width: 10vw; height:5vh"> <br>
+                        <input type="text" onfocus="focusText(this)" onblur="resetFocus(this)"  name="nae" style="width: 10vw; height:5vh"> <br>
                         <p>E-mail:<br></p>
-                        <input type="text" name="mail"style="width: 10vw; height:5vh"> <br>
+                        <input type="text" onfocus="focusText(this)" onblur="resetFocus(this)" name="mail" style="width: 10vw; height:5vh"> <br>
                         <p>Telefonnummer:<br></p>
-                        <input type="text" name="number"style="width: 10vw; height:5vh"> <br>
+                        <input type="text" onfocus="focusText(this)" onblur="resetFocus(this)" name="number" style="width: 10vw; height:5vh"> <br>
                         <p>Meddelande:<br></p>
-                        <input type="text" name="comment" style="width: 80%; height: 10vh;"><br>
+                        <input type="text" onfocus="focusText(this)" onblur="resetFocus(this)" name="comment" style="width: 80%; height: 10vh;"><br>
                         <input type="submit"  value="Skicka">
                     </form> 
+                    
+                    <div id = "Text1" > div Text 1, this text has 25% opacity</div>
+                    <div id = "Text2" > div Text 2, this text has 75% opacity and a 1 second delay</div>
+                    <button new id="button3">Klicka för att dimma texten</button>
 
+                    <button new id="button1">MAKE THE BIKE GO VROOM!!!</button>
+                    <div style="background:#98bf21;height:50px;width:50px;position:relative;"><img src="iconbike.png" alt="" style="height: 50px; width:50px;"></div>
                 </div>
         </section>
     </div>
