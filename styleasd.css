@@ -29,7 +29,7 @@ body{
     display: flex;
     width: 100%;
     height: 60px;
-    background: orange;
+    background: #ffa500;
     font-size: 1.3vw;
 }
 
@@ -46,7 +46,7 @@ body{
 }
 
 .navbar ul li a {
-  text-decoration: none;
+    text-decoration: none;
     text-transform: uppercase;
     color: black;
 }
@@ -55,6 +55,24 @@ body{
     color: white;
     transition: all 0.2s ease-in-out;
     
+}
+
+#panel,#panel1,#panel2,#panel3,#panel4,#flip{
+    padding: 10px;
+    text-align: center;
+    background-color: orange;
+    border: solid 1px black;
+}
+#panel,#panel1,#panel2,#panel3,#panel4{
+    padding: 10px;
+    display: none;
+}
+
+#panel a,#panel1 a,#panel2 a,#panel3 a,#panel4 a {
+
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
 }
 
 section{
@@ -68,6 +86,8 @@ section h1{
     font-size: 1.3rem;
 }
 section#home{
+    flex-direction: row;
+
     background: url('carl-nenzen-loven-igKjieyjcko-unsplash.jpg');   
 
 
@@ -109,10 +129,6 @@ section#buy{
 
 }
 
-.menu p{
-    padding: 5%;
-    text-align: justify;
-}
 
 .menu ul{
 
@@ -171,14 +187,6 @@ section#buy{
     background-color: orange;
     margin-top: 100px;
     justify-content: center;
-
-}
-.aboutbox:hover{
-    color:black;
-    background-color: rgb(0, 0, 0);
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-
 }
 
 .contactform{
@@ -211,6 +219,16 @@ section#buy{
     justify-content: center;
 
 }
+
+.content{
+
+    width: 40vw;
+    height: 60vh;
+    margin-top: 8%;
+    margin-left: 13%;
+    border: solid black;
+}
+
 .presentation p{
     margin-left: 10%;
     margin-top: 2%;
@@ -221,18 +239,42 @@ section#buy{
     margin-left: 10%;
 }
 
-.presentation img{
-    margin-left: 11%;
-    margin-top: 5%;
-    border: solid black;
+.presentation button{
 
+    width: 2vw;
+    height: 4vh;
+    background-color: black;
+    color: white;
+}
+
+.table{
+    background-color: orange;
+    margin-top: 10vh;
+    text-align: center;
+    border: solid 2px black;
+}
+
+#flip span{
+    height: 3px;
+    width: 30px;
+    background: black;
+    display:block;
+    margin-bottom: 5px;
 
 }
 
 
+
 @media screen and (min-width: 450px){
-    .dropdown{
-        display:none;
+
+    #panel,#panel1,#panel2,#panel3,#panel4{
+        display: none;
+    }
+    .flip{
+        display: none;
+    }
+    .flip span{
+        display: none;
     }
 }
 
@@ -241,6 +283,9 @@ section#buy{
     .navbar ul{
         display: none;        
 
+    }
+    .navbar{
+        display: none;
     }
 
     .menu{
@@ -275,45 +320,33 @@ section#buy{
         display: none;
     }
 
-    .dropbtn {
-        font-family: 'Courier New', Courier, monospace;
+    #panel,#panel1,#panel2,#panel3,#panel4,#flip{
+        padding: 10px;
+        text-align: center;
         background-color: orange;
-        color: black;
-        padding: 20px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-      }
-      
-      .dropbtn:hover, .dropbtn:focus {
-        color: white;
-        transition: all 0.2s ease-in-out;
-      }
-      
-      .dropdown {
-        position: relative;
-        display: inline-block;
-      }
-      
-      .dropdown-content {
+        border: solid 1px black;
+    }
+    #panel,#panel1,#panel2,#panel3,#panel4{
+        padding: 10px;
         display: none;
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 160px;
-        overflow: auto;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-      }
-      
-      .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
-      
-      .dropdown a:hover {background-color: #ddd;}
-      
-      .show {display: block;}
+    }
 
+      
+    .show {display: block;}
+
+  }
+
+  @media print {
+
+    .menu img{
+        display: none;
+    }
+    .aboutbox img{
+        display: none;
+    }
+
+    .dropdown{
+        display: none;
+    }
+  
   }
